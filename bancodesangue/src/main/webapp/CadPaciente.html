@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capastro de Paciente</title>
+</head>
+<style>
+  input[type=text], input[type=date], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 50%;
+    background-color: darkred;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: red;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+</style>
+<body>
+
+<h3>Capastro de Paciente</h3>
+
+<div>
+  <form action="capPaciente" method="post" accept-charset="UTF-8">
+    <label for="nmPaciente">Nome Completo</label>
+    <input type="text" id="nmPaciente" name="nmPaciente" placeholder="Seu nome..">
+
+    <label for="dtnascPaciente">Data de Nascimento</label>
+    <input type="date" id="dtnascPaciente" name="dtnascPaciente" placeholder="01-01-2025">
+
+    <p>Selecione seu gênero:</p>
+    <input type="radio" id="masculino" name="sxPaciente" value="masculino">
+    <label for="masculino">Masculino</label><br>
+
+    <input type="radio" id="feminino" name="sxPaciente" value="feminino">
+    <label for="feminino">Feminino</label><br>
+
+    <p>Já doou?</p>
+    <input type="radio" id="nao" name="jdPaciente" value="não">
+    <label for="nao">Não</label><br>
+
+    <input type="radio" id="sim" name="jdPaciente" value="sim">
+    <label for="sim">Sim</label><br>
+
+    <label for="udPaciente">Data da última doação</label>
+    <input type="date" id="udPaciente" name="udPaciente" placeholder="01-01-2025">
+
+    <label for="tsPaciente">Tipo sanguíneo</label>
+    <select id="tsPaciente" name="tsPaciente">
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+    </select>
+
+    <input type="submit" value="Enviar">
+  </form>
+</div>
+
+</body>
+</html>
